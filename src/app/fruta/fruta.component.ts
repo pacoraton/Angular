@@ -11,13 +11,33 @@ export class FrutaComponent{
     public listado_frutas = 'Naranja,Manzana,Pera, y Sandia';
 
 
-    public nombre:string="Francisco Sandoval";
-    public edad:number=25;
-    public mayor_edad:boolean=true;
+    public nombre:string;
+    public edad:number;
+    public mayor_edad:boolean;
     public trabajos:Array<any>=["Carpintero","Albañil","Fontanero"];
     comodin:any="Cualquier cosa"
+
+
+constructor(){
+    this.nombre="Francisco Sandoval"
+    this.edad=25;
+    this.mayor_edad=true;
+    console.log(this.trabajos);
+    
+    
+}
+//primer  metodo que se lanza despues del constructor
+ngOnInit(){
+   this.cambiarnombre();
+   alert("hola mundo"+this.nombre)
 }
 
-/*constructor(){
-    this.nombre="Francisco Sandoval"
-}*/
+holamundo(){
+    
+}
+
+cambiarnombre(){
+    this.nombre="Jose Ramirez";
+}
+
+}
